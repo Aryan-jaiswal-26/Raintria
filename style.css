@@ -1,0 +1,293 @@
+/* General Body Styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #FFDEE9 0%, #B5FFFC 100%);
+  color: #1a1a1a;
+  margin: 0;
+  padding: 25px 20px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.7;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  border-radius: 15px;
+}
+
+/* Header */
+header {
+  text-align: center;
+  padding: 40px 0 30px;
+  border-bottom: 4px solid #ff416c;
+  box-shadow: 0 4px 6px rgba(255, 65, 108, 0.3);
+}
+
+.logo {
+  max-width: 160px;
+  border-radius: 50%;
+  border: 5px solid #ff416c;
+  box-shadow: 0 0 20px #ff416c;
+  transition: transform 0.3s ease;
+}
+.logo:hover {
+  transform: scale(1.1);
+}
+
+h1 {
+  font-size: 3rem;
+  margin: 15px 0 10px;
+  color: #ff416c;
+  text-shadow: 2px 2px 8px #ffa1b5;
+}
+
+.tagline {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #222;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+
+/* Headings */
+h2 {
+  color: #ff416c;
+  margin-top: 50px;
+  border-bottom: 3px solid #ff4b2b;
+  padding-bottom: 8px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+/* Paragraphs */
+p {
+  font-size: 1.1rem;
+  margin: 15px 0;
+  color: #333;
+}
+
+/* Contact Section */
+.contact {
+  background: #fff0f6;
+  padding: 20px 25px;
+  border-radius: 15px;
+  margin-top: 30px;
+  box-shadow: 0 8px 12px rgba(255, 65, 108, 0.15);
+  border: 2px solid #ff416c;
+  font-weight: 600;
+}
+
+.contact a {
+  color: #ff416c;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact a:hover {
+  color: #ff735f;
+  text-decoration: underline;
+}
+
+/* QR Code Section */
+.qr {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+  justify-content: center;
+}
+
+.qr div {
+  background: white;
+  padding: 15px;
+  border-radius: 20px;
+  box-shadow: 0 12px 18px rgba(255, 65, 108, 0.25);
+  text-align: center;
+  width: 180px;
+  transition: transform 0.3s ease;
+}
+
+.qr div:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 30px rgba(255, 65, 108, 0.4);
+}
+
+.qr img {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  border-radius: 15px;
+  border: 3px solid #ff416c;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  font-size: 0.95rem;
+  margin-top: 50px;
+  color: #aa0f36;
+  font-weight: 600;
+  letter-spacing: 0.7px;
+  padding-bottom: 25px;
+  text-transform: uppercase;
+}
+
+/* Collaborations Grid */
+.collaborations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.collab-item {
+  background: white;
+  border-radius: 15px;
+  padding: 20px 15px;
+  box-shadow: 0 8px 12px rgba(255, 65, 108, 0.15);
+  text-align: center;
+  text-decoration: none;
+  color: #ff416c;
+  font-weight: 700;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  border: 2px solid transparent;
+}
+
+.collab-item img {
+  max-width: 80px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 10px;
+  filter: drop-shadow(0 0 3px rgba(255, 65, 108, 0.4));
+  transition: filter 0.3s ease;
+}
+
+.collab-item span {
+  font-size: 1rem;
+  user-select: none;
+}
+
+/* Hover effect */
+.collab-item:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 20px 30px rgba(255, 65, 108, 0.4);
+  border-color: #ff416c;
+}
+
+.collab-item:hover img {
+  filter: drop-shadow(0 0 8px #ff416c);
+}
+
+/* Active brand styling */
+.collab-item.active {
+  background: #ff416c;
+  color: white;
+  border-color: #ff1a47;
+  box-shadow: 0 20px 30px rgba(255, 20, 71, 0.6);
+  transform: translateY(-10px) scale(1.07);
+}
+
+.collab-item.active img {
+  filter: drop-shadow(0 0 10px white);
+}
+
+.collab-item.active span {
+  color: white;
+  font-weight: 800;
+}
+
+/* Enquiry & Feedback Section */
+.enquiry-section {
+  margin-top: 60px;
+  background: #fff0f5;
+  padding: 40px 25px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(255, 65, 108, 0.1);
+}
+
+.enquiry-section h2 {
+  margin-bottom: 10px;
+  color: #ff416c;
+}
+
+.enquiry-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.enquiry-form label {
+  font-weight: 600;
+  color: #333;
+}
+
+.enquiry-form input,
+.enquiry-form textarea {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.enquiry-form input:focus,
+.enquiry-form textarea:focus {
+  outline: none;
+  border-color: #ff416c;
+  box-shadow: 0 0 0 2px rgba(255, 65, 108, 0.2);
+}
+
+.enquiry-form button {
+  background-color: #ff416c;
+  color: white;
+  font-weight: bold;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.enquiry-form button:hover {
+  background: #e73258;
+  transform: scale(1.03);
+}
+
+/* Responsive Design */
+@media (max-width: 650px) {
+  body {
+    padding: 20px 15px;
+  }
+
+  h1 {
+    font-size: 2.4rem;
+  }
+
+  .qr {
+    gap: 15px;
+  }
+
+  .qr div {
+    width: 140px;
+  }
+
+  .qr img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .collaborations-grid {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 20px;
+  }
+
+  .collab-item img {
+    max-width: 60px;
+  }
+}
