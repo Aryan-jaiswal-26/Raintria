@@ -18,7 +18,7 @@ header {
   text-align: center;
   padding: 40px 0 30px;
   border-bottom: 4px solid #ff416c;
-  box-shadow: 0 4px 6px rgba(255, 65, 108, 0.3);
+  box-shadow: 0 4px 6px rgba(174, 207, 9, 0.3);
 }
 
 .logo {
@@ -32,12 +32,13 @@ header {
   transform: scale(1.1);
 }
 
-h1 {
-  font-size: 3rem;
-  margin: 15px 0 10px;
-  color: #ff416c;
-  text-shadow: 2px 2px 8px #ffa1b5;
+header h1,
+header .tagline {
+  color: #FFD700; /* your chosen color */
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
 }
+
+
 
 .tagline {
   font-size: 1.25rem;
@@ -282,6 +283,117 @@ p {
     height: 120px;
   }
 
+  .collaborations-grid {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 20px;
+  }
+
+  .collab-item img {
+    max-width: 60px;
+  }
+}
+header {
+  text-align: center;
+  padding: 60px 20px;
+  background-image: url('images/header-bg.jpeg');
+  background-size: cover;
+  background-position: center;
+  border-bottom: 4px solid #ff416c;
+  box-shadow: 0 4px 6px rgba(255, 65, 108, 0.3);
+  border-radius: 15px 15px 0 0;
+  color: white;
+  position: relative;
+}
+
+header::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4); /* Dark overlay for readability */
+  z-index: 0;
+  border-radius: 15px 15px 0 0;
+}
+
+header * {
+  position: relative;
+  z-index: 1;
+}
+/* Collaborations Grid Container */
+.collaborations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 30px;
+  margin-top: 20px;
+  padding: 0;
+}
+
+/* Individual Collaborator Item */
+.collab-item {
+  background: white;
+  border-radius: 15px;
+  padding: 20px 15px;
+  box-shadow: 0 8px 12px rgba(255, 65, 108, 0.15);
+  text-align: center;
+  text-decoration: none; /* remove underline */
+  color: #ff416c; /* brand pink */
+  font-weight: 700;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  border: 2px solid transparent;
+  cursor: pointer;
+}
+
+.collab-item img {
+  max-width: 80px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 10px;
+  filter: drop-shadow(0 0 3px rgba(255, 65, 108, 0.4));
+  transition: filter 0.3s ease;
+}
+
+.collab-item span {
+  font-size: 1rem;
+  user-select: none;
+}
+
+/* Hover effect */
+.collab-item:hover,
+.collab-item:focus {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 20px 30px rgba(255, 65, 108, 0.4);
+  border-color: #ff416c;
+  outline: none;
+}
+
+.collab-item:hover img,
+.collab-item:focus img {
+  filter: drop-shadow(0 0 8px #ff416c);
+}
+
+/* Active brand styling */
+.collab-item.active {
+  background: #ff416c;
+  color: white;
+  border-color: #ff1a47;
+  box-shadow: 0 20px 30px rgba(255, 20, 71, 0.6);
+  transform: translateY(-10px) scale(1.07);
+}
+
+.collab-item.active img {
+  filter: drop-shadow(0 0 10px white);
+}
+
+.collab-item.active span {
+  color: white;
+  font-weight: 800;
+}
+
+/* Responsive tweaks */
+@media (max-width: 500px) {
   .collaborations-grid {
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     gap: 20px;
